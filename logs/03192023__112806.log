@@ -1,0 +1,7 @@
+[ 2023-03-19 11:28:07,322 ] 19 root - INFO - Reading data from database: adult and collection: census
+[ 2023-03-19 11:28:08,191 ] 21 root - INFO - Found columns: Index(['_id', 'age', 'workclass', 'fnlwgt', 'education', 'education-num',
+       'marital-status', 'occupation', 'relationship', 'race', 'sex',
+       'capital-gain', 'capital-loss', 'hours-per-week', 'country', 'salary'],
+      dtype='object')
+[ 2023-03-19 11:28:08,191 ] 23 root - INFO - Dropping column: _id 
+[ 2023-03-19 11:28:08,214 ] 25 root - INFO - Row and columns in df: (65122, 15)

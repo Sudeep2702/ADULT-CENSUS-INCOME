@@ -1,0 +1,30 @@
+[ 2023-03-21 18:14:06,949 ] 15 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Ingestion <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-03-21 18:14:06,949 ] 22 root - INFO - Exporting collection data as pandas dataframe
+[ 2023-03-21 18:14:06,949 ] 19 root - INFO - Reading data from database: adult and collection: census
+[ 2023-03-21 18:14:08,222 ] 21 root - INFO - Found columns: Index(['_id', 'age', 'workclass', 'fnlwgt', 'education', 'education-num',
+       'marital-status', 'occupation', 'relationship', 'race', 'sex',
+       'capital-gain', 'capital-loss', 'hours-per-week', 'country', 'salary'],
+      dtype='object')
+[ 2023-03-21 18:14:08,223 ] 23 root - INFO - Dropping column: _id 
+[ 2023-03-21 18:14:08,278 ] 25 root - INFO - Row and columns in df: (32561, 15)
+[ 2023-03-21 18:14:08,278 ] 28 root - INFO - Save data in feature store
+[ 2023-03-21 18:14:09,377 ] 45 root - INFO - Create feature store folder if not available
+[ 2023-03-21 18:14:09,379 ] 49 root - INFO - Save df to feature store folder
+[ 2023-03-21 18:14:10,005 ] 54 root - INFO - split dataset into train and test set
+[ 2023-03-21 18:14:10,054 ] 58 root - INFO - create dataset directory folder if not available
+[ 2023-03-21 18:14:10,055 ] 63 root - INFO - Save df to feature store folder
+[ 2023-03-21 18:14:10,632 ] 75 root - INFO - Data ingestion artifact: DataIngestionArtifact(feature_store_file_path='/config/workspace/artifact/03212023__181406/data_ingestion/feature_store/census.csv', train_file_path='/config/workspace/artifact/03212023__181406/data_ingestion/dataset/train.csv', test_file_path='/config/workspace/artifact/03212023__181406/data_ingestion/dataset/test.csv')
+[ 2023-03-21 18:14:10,700 ] 21 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Validation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-03-21 18:14:10,701 ] 109 root - INFO - Reading base dataframe
+[ 2023-03-21 18:14:10,953 ] 113 root - INFO - Replace na value in base df
+[ 2023-03-21 18:14:10,954 ] 115 root - INFO - Drop null values colums from base df
+[ 2023-03-21 18:14:11,042 ] 44 root - INFO - selecting column name which contains null above to 0.2
+[ 2023-03-21 18:14:11,186 ] 47 root - INFO - Columns to drop: []
+[ 2023-03-21 18:14:11,835 ] 130 root - INFO - Reading train dataframe
+[ 2023-03-21 18:14:12,060 ] 139 root - INFO - Reading test dataframe
+[ 2023-03-21 18:14:12,138 ] 147 root - INFO - Drop null values colums from train df
+[ 2023-03-21 18:14:12,202 ] 44 root - INFO - selecting column name which contains null above to 0.2
+[ 2023-03-21 18:14:12,203 ] 47 root - INFO - Columns to drop: []
+[ 2023-03-21 18:14:12,213 ] 149 root - INFO - Drop null values colums from test df
+[ 2023-03-21 18:14:12,233 ] 44 root - INFO - selecting column name which contains null above to 0.2
+[ 2023-03-21 18:14:12,234 ] 47 root - INFO - Columns to drop: []

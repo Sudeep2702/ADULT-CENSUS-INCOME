@@ -1,0 +1,10 @@
+[ 2023-03-19 13:01:34,706 ] 15 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Ingestion <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-03-19 13:01:34,706 ] 22 root - INFO - Exporting collection data as pandas dataframe
+[ 2023-03-19 13:01:34,706 ] 19 root - INFO - Reading data from database: adult and collection: census
+[ 2023-03-19 13:01:35,665 ] 21 root - INFO - Found columns: Index(['_id', 'age', 'workclass', 'fnlwgt', 'education', 'education-num',
+       'marital-status', 'occupation', 'relationship', 'race', 'sex',
+       'capital-gain', 'capital-loss', 'hours-per-week', 'country', 'salary'],
+      dtype='object')
+[ 2023-03-19 13:01:35,665 ] 23 root - INFO - Dropping column: _id 
+[ 2023-03-19 13:01:35,687 ] 25 root - INFO - Row and columns in df: (65122, 15)
+[ 2023-03-19 13:01:35,688 ] 28 root - INFO - Save data in feature store

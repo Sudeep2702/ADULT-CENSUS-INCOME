@@ -1,0 +1,65 @@
+[ 2023-03-23 13:39:45,953 ] 15 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Ingestion <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-03-23 13:39:45,953 ] 22 root - INFO - Exporting collection data as pandas dataframe
+[ 2023-03-23 13:39:45,953 ] 21 root - INFO - Reading data from database: adult and collection: census
+[ 2023-03-23 13:39:46,685 ] 23 root - INFO - Found columns: Index(['_id', 'age', 'workclass', 'fnlwgt', 'education', 'education-num',
+       'marital-status', 'occupation', 'relationship', 'race', 'sex',
+       'capital-gain', 'capital-loss', 'hours-per-week', 'country', 'salary'],
+      dtype='object')
+[ 2023-03-23 13:39:46,686 ] 25 root - INFO - Dropping column: _id 
+[ 2023-03-23 13:39:46,713 ] 27 root - INFO - Row and columns in df: (32561, 15)
+[ 2023-03-23 13:39:46,713 ] 28 root - INFO - Save data in feature store
+[ 2023-03-23 13:39:47,380 ] 45 root - INFO - Create feature store folder if not available
+[ 2023-03-23 13:39:47,381 ] 49 root - INFO - Save df to feature store folder
+[ 2023-03-23 13:39:47,768 ] 54 root - INFO - split dataset into train and test set
+[ 2023-03-23 13:39:47,795 ] 58 root - INFO - create dataset directory folder if not available
+[ 2023-03-23 13:39:47,795 ] 63 root - INFO - Save df to feature store folder
+[ 2023-03-23 13:39:48,166 ] 75 root - INFO - Data ingestion artifact: DataIngestionArtifact(feature_store_file_path='/config/workspace/artifact/03232023__133945/data_ingestion/feature_store/census.csv', train_file_path='/config/workspace/artifact/03232023__133945/data_ingestion/dataset/train.csv', test_file_path='/config/workspace/artifact/03232023__133945/data_ingestion/dataset/test.csv')
+[ 2023-03-23 13:39:48,205 ] 21 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Validation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-03-23 13:39:48,205 ] 109 root - INFO - Reading base dataframe
+[ 2023-03-23 13:39:48,392 ] 113 root - INFO - Replace na value in base df
+[ 2023-03-23 13:39:48,393 ] 115 root - INFO - Drop null values colums from base df
+[ 2023-03-23 13:39:48,465 ] 44 root - INFO - selecting column name which contains null above to 0.2
+[ 2023-03-23 13:39:48,466 ] 47 root - INFO - Columns to drop: []
+[ 2023-03-23 13:39:49,099 ] 150 root - INFO - Reading train dataframe
+[ 2023-03-23 13:39:49,353 ] 174 root - INFO - Reading test dataframe
+[ 2023-03-23 13:39:49,438 ] 196 root - INFO - Drop null values colums from train df
+[ 2023-03-23 13:39:49,441 ] 44 root - INFO - selecting column name which contains null above to 0.2
+[ 2023-03-23 13:39:49,442 ] 47 root - INFO - Columns to drop: []
+[ 2023-03-23 13:39:49,444 ] 198 root - INFO - Drop null values colums from test df
+[ 2023-03-23 13:39:49,446 ] 44 root - INFO - selecting column name which contains null above to 0.2
+[ 2023-03-23 13:39:49,447 ] 47 root - INFO - Columns to drop: []
+[ 2023-03-23 13:39:49,473 ] 207 root - INFO - Is all required columns present in train df
+[ 2023-03-23 13:39:49,474 ] 209 root - INFO - Is all required columns present in test df
+[ 2023-03-23 13:39:49,474 ] 213 root - INFO - As all column are available in train df hence detecting data drift
+[ 2023-03-23 13:39:49,474 ] 87 root - INFO - Hypothesis workclass: float64, float64 
+[ 2023-03-23 13:39:49,518 ] 87 root - INFO - Hypothesis education: float64, float64 
+[ 2023-03-23 13:39:49,563 ] 87 root - INFO - Hypothesis marital-status: float64, float64 
+[ 2023-03-23 13:39:49,571 ] 87 root - INFO - Hypothesis occupation: float64, float64 
+[ 2023-03-23 13:39:49,580 ] 87 root - INFO - Hypothesis relationship: float64, float64 
+[ 2023-03-23 13:39:49,625 ] 87 root - INFO - Hypothesis race: float64, float64 
+[ 2023-03-23 13:39:49,664 ] 87 root - INFO - Hypothesis sex: float64, float64 
+[ 2023-03-23 13:39:49,702 ] 87 root - INFO - Hypothesis country: float64, float64 
+[ 2023-03-23 13:39:49,742 ] 87 root - INFO - Hypothesis age: float64, float64 
+[ 2023-03-23 13:39:49,751 ] 87 root - INFO - Hypothesis hours-per-week: float64, float64 
+[ 2023-03-23 13:39:49,793 ] 216 root - INFO - As all column are available in test df hence detecting data drift
+[ 2023-03-23 13:39:49,794 ] 87 root - INFO - Hypothesis workclass: float64, float64 
+[ 2023-03-23 13:39:49,813 ] 87 root - INFO - Hypothesis education: float64, float64 
+[ 2023-03-23 13:39:49,818 ] 87 root - INFO - Hypothesis marital-status: float64, float64 
+[ 2023-03-23 13:39:49,824 ] 87 root - INFO - Hypothesis occupation: float64, float64 
+[ 2023-03-23 13:39:49,837 ] 87 root - INFO - Hypothesis relationship: float64, float64 
+[ 2023-03-23 13:39:49,843 ] 87 root - INFO - Hypothesis race: float64, float64 
+[ 2023-03-23 13:39:49,860 ] 87 root - INFO - Hypothesis sex: float64, float64 
+[ 2023-03-23 13:39:49,878 ] 87 root - INFO - Hypothesis country: float64, float64 
+[ 2023-03-23 13:39:49,882 ] 87 root - INFO - Hypothesis age: float64, float64 
+[ 2023-03-23 13:39:49,889 ] 87 root - INFO - Hypothesis hours-per-week: float64, float64 
+[ 2023-03-23 13:39:49,895 ] 220 root - INFO - Write reprt in yaml file
+[ 2023-03-23 13:39:49,905 ] 225 root - INFO - Data validation artifact: DataValidationArtifact(report_file_path='/config/workspace/artifact/03232023__133945/data_validation/report.yaml')
+[ 2023-03-23 13:39:49,922 ] 21 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Transformation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-03-23 13:39:50,160 ] 106 root - INFO - Before resampling in training set Input: (24129, 10) Target:(24129,)
+[ 2023-03-23 13:40:02,891 ] 108 root - INFO - After resampling in training set Input: (35178, 10) Target:(35178,)
+[ 2023-03-23 13:40:02,892 ] 110 root - INFO - Before resampling in testing set Input: (6033, 10) Target:(6033,)
+[ 2023-03-23 13:40:03,714 ] 112 root - INFO - After resampling in testing set Input: (8724, 10) Target:(8724,)
+[ 2023-03-23 13:40:03,731 ] 51 root - INFO - Entered the save_object method of utils
+[ 2023-03-23 13:40:03,735 ] 55 root - INFO - Exited the save_object method of utils
+[ 2023-03-23 13:40:03,735 ] 51 root - INFO - Entered the save_object method of utils
+[ 2023-03-23 13:40:03,736 ] 55 root - INFO - Exited the save_object method of utils
