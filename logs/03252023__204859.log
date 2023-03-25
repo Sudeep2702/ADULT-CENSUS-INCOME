@@ -1,0 +1,6 @@
+[ 2023-03-25 20:49:01,045 ] 15 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Ingestion <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-03-25 20:49:01,045 ] 22 root - INFO - Exporting collection data as pandas dataframe
+[ 2023-03-25 20:49:01,045 ] 21 root - INFO - Reading data from database: adult and collection: census
+[ 2023-03-25 20:49:01,049 ] 23 root - INFO - Found columns: Index([], dtype='object')
+[ 2023-03-25 20:49:01,049 ] 27 root - INFO - Row and columns in df: (0, 0)
+[ 2023-03-25 20:49:01,049 ] 28 root - INFO - Save data in feature store
