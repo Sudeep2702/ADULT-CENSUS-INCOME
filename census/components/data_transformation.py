@@ -87,7 +87,7 @@ class DataTransformation:
             target_feature_test_df = test_df[TARGET_COLUMN]
             
             label_encoder = LabelEncoder()
-            label_encoder.fit(target_feature_train_df)
+            #label_encoder.fit(target_feature_train_df)
 
             #transformation on target columns
             target_feature_train_arr = label_encoder.fit_transform(target_feature_train_df)
