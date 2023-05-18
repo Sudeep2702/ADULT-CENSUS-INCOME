@@ -1,0 +1,6 @@
+[ 2023-05-17 07:53:23,907 ] 15 root - INFO - Creating model resolver object
+[ 2023-05-17 07:53:23,908 ] 17 root - INFO - Reading file :/config/workspace/adult.csv
+[ 2023-05-17 07:53:28,145 ] 39 root - INFO - Loading input_encoder to encode dataset
+[ 2023-05-17 07:53:28,237 ] 63 root - INFO - Loading transformer to transform dataset
+[ 2023-05-17 07:53:28,245 ] 69 root - INFO - Loading model to make prediction
+[ 2023-05-17 07:53:29,874 ] 73 root - INFO - Target encoder to convert predicted column into categorical

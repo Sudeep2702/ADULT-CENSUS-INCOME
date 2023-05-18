@@ -38,7 +38,7 @@ class DataIngestion:
             mask = df.applymap(lambda x: x == '?')
             df = df[~mask.any(axis=1)]
             
-            #dropping some columns
+            #dropping some columns after gaining the knowloedge from EDA
             df.drop(['fnlwgt','capital-gain','capital-loss'],axis=1,inplace=True)    
 
             #Save data in feature store

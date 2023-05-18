@@ -8,7 +8,7 @@ TRAIN_FILE_NAME = "train.csv"
 TEST_FILE_NAME = "test.csv"
 TRANSFORMER_OBJECT_FILE_NAME = "transformer.pkl"
 TARGET_ENCODER_OBJECT_FILE_NAME = "target_encoder.pkl"
-INPUT_FEATURE_ENCODER_OBJECT_FILE_NAME = "input_target_encoder.pkl"
+INPUT_FEATURE_ENCODER_OBJECT_FILE_NAME = "input_feature_encoder.pkl"
 MODEL_FILE_NAME = "model.pkl"
 
 class TrainingPipelineConfig:
@@ -75,3 +75,13 @@ class ModelEvaluationConfig:
         self.change_threshold = 0.01
 
 
+class ModelPusherConfig:
+
+    def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+        self.model_pusher_dir = os.path.join(training_pipeline_config.artifact_dir , "model_pusher")
+        self.saved_model_dir = os.path.join("saved_models")
+        self.pusher_model_dir = os.path.join(self.model_pusher_dir,"saved_models")
+        self.pusher_model_path = os.path.join(self.pusher_model_dir,MODEL_FILE_NAME)
+        self.pusher_transformer_path = os.path.join(self.pusher_model_dir,TRANSFORMER_OBJECT_FILE_NAME)
+        self.pusher_target_encoder_path = os.path.join(self.pusher_model_dir,TARGET_ENCODER_OBJECT_FILE_NAME)
+        self.pusher_input_feature_encoder_path = os.path.join(self.pusher_model_dir,INPUT_FEATURE_ENCODER_OBJECT_FILE_NAME)

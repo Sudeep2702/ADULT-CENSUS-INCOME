@@ -127,8 +127,10 @@ class DataTransformation:
 
             utils.save_object(file_path=self.data_transformation_config.target_encoder_path,
             obj=label_encoder)
-            utils.save_object(file_path=self.data_transformation_config.target_encoder_path,
-            obj=ordinal_encoder)
+            utils.save_object(file_path=self.data_transformation_config.input_feature_encoder_path,
+             obj=ordinal_encoder)
+           
+
 
             data_transformation_artifact = artifact_entity.DataTransformationArtifact(
                 transform_object_path=self.data_transformation_config.transform_object_path,
