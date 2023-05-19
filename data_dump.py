@@ -1,10 +1,11 @@
 import pymongo
 import pandas as pd
 import json
+from census.config import mongo_client
+import os 
 
-client = pymongo.MongoClient("mongodb://localhost:27017/neurolabDB")
 
-
+DATA_FILE_PATH= "/config/workspace/adult.csv"
 DATABASE_NAME="adult"
 COLLECTION_NAME="census"
 
@@ -16,8 +17,8 @@ if __name__=="__main__":
     df.reset_index(drop=True,inplace=True)
 
     json_record = list(json.loads(df.T.to_json()).values())
-    print(json_record[0])
+    print(json_record[1:3])
     #insert converted json record to mongo db
-    client[DATABASE_NAME][COLLECTION_NAME].insert_many(json_record)
+    mongo_client[DATABASE_NAME][COLLECTION_NAME].insert_many(json_record)
 
 
