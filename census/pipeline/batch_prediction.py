@@ -2,7 +2,7 @@ from census.exception import SensorException
 from census.logger import logging
 from census.predictor import ModelResolver
 import pandas as pd
-from ensus.utils import load_object
+from census.utils import load_object
 import os,sys
 from datetime import datetime
 PREDICTION_DIR="prediction"

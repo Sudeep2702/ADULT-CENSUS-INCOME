@@ -1,5 +1,5 @@
 from asyncio import tasks
-import json
+import json 
 from textwrap import dedent
 import pendulum
 import os
@@ -20,7 +20,7 @@ with DAG(
 
     
     def training(**kwargs):
-        from sensor.pipeline.training_pipeline import start_training_pipeline
+        from census.pipeline.training_pipeline import start_training_pipeline
         start_training_pipeline()
     
     def sync_artifact_to_s3_bucket(**kwargs):
